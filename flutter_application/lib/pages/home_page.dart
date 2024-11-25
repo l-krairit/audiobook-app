@@ -58,55 +58,52 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-          const Spacer(), // Pushes buttons to the bottom
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                // Left Medium Circular Button
-                SizedBox(
-                  width: 80,
-                  height: 80, // Ensures a circular shape
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      shape: const CircleBorder(),
-                      padding: EdgeInsets.zero, // No extra padding
-                    ),
-                    child: const Icon(Icons.arrow_back), // Example icon
-                  ),
-                ),
-                // Center Large Circular Button
-                SizedBox(
-                  width: 100,
-                  height: 100, // Ensures a larger circular shape
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      shape: const CircleBorder(),
-                      padding: EdgeInsets.zero, // No extra padding
-                    ),
-                    child: const Icon(Icons.play_arrow), // Example icon
-                  ),
-                ),
-                // Right Medium Circular Button
-                SizedBox(
-                  width: 80,
-                  height: 80, // Ensures a circular shape
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      shape: const CircleBorder(),
-                      padding: EdgeInsets.zero, // No extra padding
-                    ),
-                    child: const Icon(Icons.arrow_forward), // Example icon
-                  ),
-                ),
-              ],
-            ),
-          ),
         ],
+      ),
+      bottomNavigationBar: Container(
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        color: Colors.white,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            // Left Button
+            SizedBox(
+              width: 80,
+              height: 80,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  shape: const CircleBorder(),
+                ),
+                child: const Center(child: Icon(Icons.arrow_back)),
+              ),
+            ),
+            // Center Button
+            SizedBox(
+              width: 100,
+              height: 100,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  shape: const CircleBorder(),
+                ),
+                child: const Icon(Icons.play_arrow),
+              ),
+            ),
+            // Right Button
+            SizedBox(
+              width: 80,
+              height: 80,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  shape: const CircleBorder(),
+                ),
+                child: const Center(child: Icon(Icons.dehaze)),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
